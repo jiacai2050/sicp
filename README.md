@@ -1,6 +1,6 @@
 ## SICP
 
-![SICP](http://img4.douban.com/lpic/s1113106.jpg)
+[![SICP](http://img4.douban.com/lpic/s1113106.jpg)](http://sicp.pub/)
 
 [SICP](http://book.douban.com/subject/1451622/)，一本讲解编程真谛的经典书籍。之前上大学期间，陆陆续续看了2遍这本书，无奈都没坚持到底。第一次只看完第一章，第二次只看完前三章。很多习题也没做。
 
@@ -35,7 +35,7 @@
 感谢你们，希望能够一起享受这一次奇妙之旅。
 
 - [南瓜](https://github.com/ng-wei)
-- 耗子
+- [耗子](https://github.com/haozi-yz)
 - [小挖](https://github.com/jerrychen1990)
 
 ## Timeline
