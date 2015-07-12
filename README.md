@@ -1,6 +1,6 @@
 ## SICP
 
-[![SICP](http://img4.douban.com/lpic/s1113106.jpg)](http://sicp.pub/)
+[![SICP](http://img4.douban.com/lpic/s1113106.jpg)](http://www.sicp.pub/)
 
 [SICP](http://book.douban.com/subject/1451622/)，一本讲解编程真谛的经典书籍。之前上大学期间，陆陆续续看了2遍这本书，无奈都没坚持到底。第一次只看完第一章，第二次只看完前三章。很多习题也没做。
 
