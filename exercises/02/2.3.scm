@@ -19,7 +19,7 @@
   (* (width r) (heigth r)))
 
 (define (perimeter r)
-  (* x (width r) (heigth r)))
+  (* 2 (+ (width r) (heigth r))))
 
 ;第二种
 (define (make-rect a w h) 

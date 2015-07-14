@@ -25,7 +25,7 @@
 
 ## 一些资料
 
-- 首先可能是[MIT的公开课](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)，为了方面观看，我写了个脚本把这些视频＋英文字母下载下来，并且传到了[百度网盘](http://pan.baidu.com/s/1jGrI5EY)上，有需要的可以自取。
+- 首先是[MIT的视频公开课](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)，为了方面观看，我写了个脚本把这些视频＋英文字幕下来了，并且传到了[百度网盘](http://pan.baidu.com/s/1jGrI5EY)上，有需要的可以自取。
 - [SICP书中的源码](http://mitpress.mit.edu/sicp/code/index.html)
 - [epub格式的英文原版 + 在线HTML5版sicp](https://github.com/sarabander/sicp)
 
