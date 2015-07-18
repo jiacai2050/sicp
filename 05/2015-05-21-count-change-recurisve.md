@@ -37,9 +37,9 @@
     ((or (< amount 0) (= 0 kind)) 0)
     (else
       (+ (cc amount (- kind 1))
-         (cc (- amount (money-of-kind kind)) kind)))))
+         (cc (- amount (kinds-of-coins kind)) kind)))))
 
-(define (money-of-kind kind)
+(define (kinds-of-coins kind)
   (cond
     ((= kind 5) 50)
     ((= kind 4) 25)
@@ -55,4 +55,23 @@
 
 首先需要明确的是，所有能用递归方式实现的过程应该都能用迭代方式实现，因为所有的过程在计算机中执行的都是按照图灵机方式（前进、跳转、判断）执行的，我们能不能想出来那又是另一会事了。
 
-迭代方式我现在还没想出来，这里延伸下，这个问题和0-1背包问题很类似，可以类比考虑。
+<del>迭代方式我现在还没想出来，这里延伸下，这个问题和0-1背包问题很类似，可以类比考虑。</del>
+
+在网上找到了，一个比较[合理的迭代解法](/jiacai2050/sicp/blob/master/05/2015-05-24-count-change-iterative.md)。
+
+## 思考 
+
+如果改变kinds-of-coins中硬币的顺序，程序还正确吗？时空复杂度变了吗？
+
+找零钱问题的复杂度分析可参考[习题1.14](/jiacai2050/sicp/blob/master/exercises/01/1.14.md)：（n为现金数）
+
+- 时间复杂度O(n)
+- 空间复杂度2<sup>n</sup>
+
+改变kinds-of-coins中硬币的顺序，并不会改变找零钱问题算法树形递归的高度，所以时空复杂度不变。
+程序当然也是正确的了，应该还是复合上面的条件：
+
+1. 将现金a换成除第一种硬币以外的其他硬币的不同方式，加上
+2. 将现金a－d换成所有种类硬币的不同方式。其中d为第一种硬币的面值。
+
+
