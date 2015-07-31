@@ -5,7 +5,7 @@
   (fold-right (lambda(x y) (append y (list x))) nil sequence))
 
 (reverse (list 1 2 3 4))
-;Value 24: (4 3 2 1)
+;Value: (4 3 2 1)
 
 
 (define (reverse sequence)

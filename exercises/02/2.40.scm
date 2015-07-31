@@ -1,11 +1,12 @@
 (load "lib/op.scm")
 
-(define (unique-pairs n)
-  (define (enumerate-interval n)
+(define (enumerate-interval n)
     (if (< n 1)
       nil
       (append (enumerate-interval (- n 1))
               (list n))))
+
+(define (unique-pairs n)
   (accumulate append nil 
     (map
       (lambda (i)
