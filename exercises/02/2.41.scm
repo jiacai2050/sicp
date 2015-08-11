@@ -5,7 +5,7 @@
       (let ((a1 (car triple))
             (a2 (cadr triple))
             (a3 (caddr triple)))
-      (and (< a1 a3)
+      (and (< a3 n)
            (< a2 a3))))
     (map (lambda (p) 
            (append p (list (- s (car p) (cadr p)))))
