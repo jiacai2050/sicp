@@ -1,4 +1,4 @@
-这几天一直在看图形语言，有一些疑惑的地方，在小组内讨论后，重新思考了下，终于发现了事情的真相，现在好好把这个图形语言做个总结：
+这几天一直在看SICP 2.2.4小节的[图形语言](https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-15.html#%_sec_2.2.4)，有一些疑惑的地方，在小组内讨论后，重新思考了下，终于发现了事情的真相，现在好好把这个图形语言做个总结：
 
 首先，要明确，在描述一门语言时，主要包括三部分：
 
@@ -40,6 +40,11 @@ origin(Frame) + x * Edge1(Frame) + y * Edge2(Frame)
                 (scale-vect (yor-vect v)
                             (edge2-frame frame))))))
 ```
+
+题外话：
+
+> 中文版SICP将frame翻译成了“框架”，实在是觉得难以理解，我觉得将其意译为“画板”更合适。
+
 ## 抽象手段
 
 本图形语言采用本章着重讲解的数据抽象来达到分层设计的目的，比如上面的frame，我们不需要关心frame到底是如何实现的，我们只需要知道它的
@@ -172,7 +177,7 @@ origin(Frame) + x * Edge1(Frame) + y * Edge2(Frame)
 通过代码，我们可以看到方法2直接对画家的参数画板进行相应变换。
 
 
-### 画家的变换的递归应用
+### 画家变换的递归应用
 
 由于该图形语言满足闭包性质，所以我们可以对其进行递归的变换，比如：
 ```
@@ -234,3 +239,7 @@ origin(Frame) + x * Edge1(Frame) + y * Edge2(Frame)
           ((frame-coord-map frame) (end-segment segment))))
       segment-list)))
 ```
+
+## 扩延阅读
+
+- [how-frames-are-used-in-the-picture-language-in-sicp](http://stackoverflow.com/questions/15522448/how-frames-are-used-in-the-picture-language-in-sicp)
