@@ -20,7 +20,13 @@
             (corner (corner-split painter (- n 1))))
         (beside (below painter top-left)
                 (below bottom-right corner))))))
-  
+
+(define (square-limit painter n)
+  (let ((quarter (corner-split painter n)))
+    (let ((half (beside (flip-horiz quarter) quarter)))
+      (below (flip-vert half) 
+             half))))
+
 (define (frame-coord-map frame)
   (lambda (v)
     (add-vect
@@ -30,12 +36,6 @@
                 (scale-vect (yor-vect v)
                             (edge2-frame frame))))))
 
-(define (right-split painter n)
-  (if (= n 0)
-    painter
-    (let ((smaller (right-split painter (- n 1)))
-      (beside painter
-              (below smaller smaller))))))
 
 ;画家
 (define (segment->painter segment-list)
