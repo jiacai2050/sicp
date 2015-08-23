@@ -1,3 +1,4 @@
+(load "lib/deriv.scm")
 (define (deriv exp var)
   (cond
     ((number? exp) 0)
@@ -16,19 +17,27 @@
       (let ((u (base exp))
             (n (exponent exp)))
         (make-product n
-                      (make-exponentiation u (- n 1))
-                      (deriv u var))))
+                      (make-product
+                        (make-exponentiation u (- n 1))
+                        (deriv u var)))))
     (else
       (error "Unknown expression type: DERIV" exp))))
 
 (define (make-exponentiation u n)
   (cond
-    ((= n 0) 1)
-    ((= n 1) u)
-    (else (** u n))))
+    ((=number? n 0) 1)
+    ((=number? n 1) u)
+    (else '(** u n))))
 
 (define (exponentiation? exp)
-  (same-variable? ** (car exp)))
+  (same-variable? '** (car exp)))
 
 (define base cadr)
 (define exponent caddr)
+
+(deriv '(* (* x y) (+ x 3)) 'x)
+;Value: (+ (* x y) (* (+ x 3) y))
+(deriv '(** x 2) 'x)
+;Value: (* 2 x)
+(deriv '(+ x (** x 2)) 'x)
+;Value: (+ 1 (* 2 x))
