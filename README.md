@@ -46,6 +46,10 @@
 - [耗子](https://github.com/haozi-yz)
 - [小挖](https://github.com/jerrychen1990)
 
+如果你有兴趣，欢迎加入我们的SICP读书QQ群：`119845407`。（手机QQ可直接扫码😊）
+
+![](SICP_QQ.png)
+
 ## Timeline
 
 - 2015-5-17  第三次开启SICP之旅
