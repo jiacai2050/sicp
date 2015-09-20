@@ -36,6 +36,7 @@
 - 首先是[MIT的视频公开课](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)，为了方面观看，我写了个脚本把这些视频＋英文字幕下来了，并且传到了[百度网盘](http://pan.baidu.com/s/1jGrI5EY)上，有需要的可以自取。
 - [SICP书中的源码](http://mitpress.mit.edu/sicp/code/index.html)
 - [epub格式的英文原版 + 在线HTML5版sicp](https://github.com/sarabander/sicp)
+- [北大SICP教学主页](http://www.math.pku.edu.cn/teachers/qiuzy/progtech/)，强烈推荐，课堂PPT总结的很好，还有中文版的[勘误表](http://www.math.pku.edu.cn/teachers/qiuzy/books/sicp/errata.htm)。
 
 ## 战友
 
@@ -55,4 +56,4 @@
 
 - 2015-5-17  第三次开启SICP之旅
 - 2015-7-12  结束第一章，构造过程抽象。[我的总结](http://liujiacai.net/blog/2015/07/18/sicp-chapter1-summary/)
-- 2015-9-20  结束第二章，构造数据抽象。[我的总结](http://liujiacai.net/blog/2015/09/20/sicp-chapter2-summary/))
+- 2015-9-20  结束第二章，构造数据抽象。[我的总结](http://liujiacai.net/blog/2015/09/20/sicp-chapter2-summary/)
