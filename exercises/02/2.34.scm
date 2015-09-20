@@ -1,4 +1,4 @@
-(load "lib/op.scm")
+(load "lib/list.scm")
 
 (define (horner-eval x coefficitent-sequences)
   (accumulate (lambda (this-coeff higher-terms) (+ this-coeff (* x higher-terms)))

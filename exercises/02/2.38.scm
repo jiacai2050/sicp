@@ -1,4 +1,4 @@
-(load "lib/op.scm")
+(load "lib/list.scm")
 (load "2.37.scm")
 
 (define (fold-right op initial sequence)

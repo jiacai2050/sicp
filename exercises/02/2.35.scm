@@ -1,4 +1,4 @@
-(load "lib/op.scm")
+(load "lib/list.scm")
 (load "2.28.scm")
 
 (define (count-leaves t)

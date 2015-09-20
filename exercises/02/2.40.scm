@@ -1,4 +1,4 @@
-(load "lib/op.scm")
+(load "lib/list.scm")
 
 (define (enumerate-interval n)
     (if (< n 1)
