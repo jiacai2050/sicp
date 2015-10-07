@@ -57,3 +57,8 @@
 - 2015-5-17  第三次开启SICP之旅
 - 2015-7-12  结束第一章，构造过程抽象。[我的总结](http://liujiacai.net/blog/2015/07/18/sicp-chapter1-summary/)
 - 2015-9-20  结束第二章，构造数据抽象。[我的总结](http://liujiacai.net/blog/2015/09/20/sicp-chapter2-summary/)
+
+## License
+
+- 代码使用[MIT License](http://liujiacai.net/license/MIT.html?year=2015)
+- 笔记使用[知识共享署名-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-sa/4.0/)
