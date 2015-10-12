@@ -11,7 +11,8 @@
 (define (count-pairs x)
   (if (not (pair? x))
     0
-    (if (seen? x) 0
+    (if (seen? x) 
+      0
       (begin
         (set! already-seen (cons x already-seen))
         (+ (count-pairs (car x))

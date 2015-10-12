@@ -1,3 +1,4 @@
+(define nil '())
 (define already-seen '())
 (define (seen? x)
   (define (iter already-seen)
@@ -12,12 +13,15 @@
     (if (seen? x)
       #t
       (begin
-        (set! already-seen (append already-seen x))
-        (hasCircle? (cdr x))))
+        (set! already-seen (cons x already-seen))
+        (or (hasCircle? (car x))
+            (hasCircle? (cdr x)))))
     #f))
 
 (define aa '(a b c))
+(hasCircle? aa)
 ;Value: #f
+
 (define p3 (cons 'c nil))
 (define p2 (cons 'b p3))
 (define p1 (cons 'a p2))
