@@ -1,3 +1,6 @@
+; cel-fah-converter 的变形可以参考 习题 3.37
+; https://github.com/jiacai2050/sicp/blob/master/exercises/03/3.37.scm
+
 (load "propagation.scm")
 
 (define (cel-fah-converter c f)

@@ -16,7 +16,7 @@
               (set! informant setter)
               (for-each-except setter inform-about-value constraints))
             ((not (= value newval))
-              (error "Contradction" (list value newval)))
+              (error "Contradiction" (list value newval)))
             (else 'ignore)))
     (define (forget-my-value retractor)
       (if (eq? retractor informant)
@@ -78,6 +78,7 @@
     (forget-value! sum me)
     (forget-value! a1 me)
     (forget-value! a2 me)
+    ; TODO 为什么需要理解执行 process-new-value 
     (process-new-value))
   (define (me request)
     (cond

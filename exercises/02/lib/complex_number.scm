@@ -60,7 +60,7 @@
   (define (tag x) (attach-tag 'rectangular x))
   (put 'real-part '(rectangular) real-part)
   (put 'imag-part '(rectangular) imag-part)
-  (put 'imagnitude '(rectangular) imagnitude)
+  (put 'magnitude '(rectangular) magnitude)
   (put 'angle '(rectangular) angle)
   (put 'make-from-real-imag 'rectangular
     (lambda (x y) (tag (make-from-real-imag x y))))
