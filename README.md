@@ -4,7 +4,7 @@
 
 [SICP](http://book.douban.com/subject/1451622/)，一本讲解编程真谛的经典教材。之前上大学期间，陆陆续续看了2遍这本书，无奈都没坚持到底。第一次只看完第一章，第二次只看完前三章。很多习题也没做。
 
-这，是第三次进攻。这个repo会记录我在看SICP时的习题代码与一些自己的笔记与想法，这么做一方面是给自己查漏补缺，另一方面也为希望对今后阅读sicp的人有些许帮助。
+这，是第三次进攻。这个 repo 会记录我在看 SICP 时的习题代码与一些自己的笔记与想法，这么做一方面是给自己查漏补缺，另一方面也为希望对今后阅读 SICP 的人有些许帮助。
 
 ## Why SICP 
 
@@ -12,9 +12,20 @@
 - [向热爱计算机科学的你推荐SICP](http://www.nowamagic.net/librarys/veda/detail/1905)
 - 王垠的[如何掌握程序语言](http://yinwang0.lofter.com/post/183ec2_47bea8)
 
-##目标
+## 目标
 
 在**2016年1月1号**之前啃完**所有章节与习题**！！
+
+## 建议
+
+完完整整看完一本书是一件困难的事，本书更是如此。
+
+这本书的很多内容、习题需要仔细揣摩才能领略其精髓，所以看这本书一定不要**心急**。
+其次，在阅读时，请务必关闭手机上一些社交工具，并预留出至少 1 个小时的完整时间来看，否则我不认为你真的能有所收获。
+
+学习是件很苦的事，大多数人都是三分钟热度，所以如果你觉得看这本书让你很烦躁，不妨出去运动一下，或听一会[音乐🎵](http://music.163.com/#/artist?id=88149)，第二天接着来。坚持下来，不要放弃，更不要失去对探索编程真谛的好奇心。
+
+以上与所有 SICPer 共勉。
 
 ## 环境准备
 
@@ -31,26 +42,29 @@
 
 我的初始化环境就是这样了，后面如果有改变我会修改这里的说明。
 
-## 一些资料
+## 辅助资料
 
-- 首先是[MIT的视频公开课](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)，为了方面观看，我写了个脚本把这些视频＋英文字幕下来了，并且传到了[百度网盘](http://pan.baidu.com/s/1jGrI5EY)上，有需要的可以自取。
-- [SICP书中的源码](http://mitpress.mit.edu/sicp/code/index.html)
-- [epub格式的英文原版 + 在线HTML5版sicp](https://github.com/sarabander/sicp)
-- [北大SICP教学主页](http://www.math.pku.edu.cn/teachers/qiuzy/progtech/)，强烈推荐，课堂PPT总结的很好，还有中文版的[勘误表](http://www.math.pku.edu.cn/teachers/qiuzy/books/sicp/errata.htm)。
+- [Google](https://www.google.com/ncr) is always your friend
+- [The complete text in HTML](https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-4.html)
+- [MIT SICP Web Site](http://mitpress.mit.edu/sicp)
+- [MIT 视频公开课](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)，为了方面观看，我写了个脚本把这些视频＋英文字幕下载并且传到了[百度网盘](http://pan.baidu.com/s/1jGrI5EY)上
+- [epub 格式 + 在线 HTML5 版的 SICP](https://github.com/sarabander/sicp)
+- [北大 SICP 教学主页](http://www.math.pku.edu.cn/teachers/qiuzy/progtech/)，强烈推荐，课堂PPT总结的很好，还有中文版的[勘误表](http://www.math.pku.edu.cn/teachers/qiuzy/books/sicp/errata.htm)
 
 ## 战友
 
-很有幸，这次我不是一个人。我和三个同事成立了个sicp学习小组，相互督促，相互交流。经过两周的试验，发现效果还比较满意。
+很有幸，这次我不是一个人。我和三个同事成立了个 SICP 学习小组，相互督促，相互交流。经过两周的试验，发现效果还比较满意。
 
 感谢你们，希望能够一起享受这一次奇妙之旅。
 
 - [南瓜](https://github.com/ng-wei)
-- [耗子](https://github.com/haozi-yz)
 - [小挖](https://github.com/jerrychen1990)
+- [耗子](https://github.com/haozi-yz)，由于工作繁忙，于 2015-08-17 放弃
 
-如果你有兴趣，欢迎加入我们的SICP读书QQ群：`119845407`。（手机QQ可直接扫码😊）
+欢迎志同道合的朋友加入我们的 SICP 读书 QQ 群：`119845407`。
+手机 QQ 可直接扫码😊
 
-![](SICP_QQ.png)
+![sicp_qq](SICP_QQ.png)
 
 ## Timeline
 
@@ -60,5 +74,5 @@
 
 ## License
 
-- 代码使用[MIT License](http://liujiacai.net/license/MIT.html?year=2015)
-- 笔记使用[知识共享署名-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-sa/4.0/)
+- 代码使用 [MIT License](http://liujiacai.net/license/MIT.html?year=2015)
+- 笔记使用 [知识共享署名-相同方式共享 4.0 国际许可协议](http://creativecommons.org/licenses/by-sa/4.0/)
