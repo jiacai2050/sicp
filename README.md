@@ -1,12 +1,12 @@
 ## SICP
 
-[![SICP](http://img4.douban.com/lpic/s1113106.jpg)](http://liujiacai.net/sicp/)
+[![SICP](http://img4.douban.com/lpic/s1113106.jpg)](http://sicp.liujiacai.net/)
 
 [SICP](http://book.douban.com/subject/1451622/)，一本讲解编程真谛的经典教材。之前上大学期间，陆陆续续看了2遍这本书，无奈都没坚持到底。第一次只看完第一章，第二次只看完前三章。很多习题也没做。
 
 这，是第三次进攻。这个 repo 会记录我在看 SICP 时的习题代码与一些自己的笔记与想法，这么做一方面是给自己查漏补缺，另一方面也为希望对今后阅读 SICP 的人有些许帮助。
 
-为了方便检索，我使用 `gitbook` 制作了[《SICP 读书笔记》电子书](http://liujiacai.net/sicp/)，供大家参考。
+为了方便检索，我使用 `gitbook` 制作了[《SICP 读书笔记》电子书](http://sicp.liujiacai.net/)，供大家参考。
 
 ## Why SICP 
 
