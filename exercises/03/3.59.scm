@@ -7,9 +7,8 @@
 
 (define foo (integrate-series double))
 
-(for-each (lambda (x) (display-blank (stream-ref foo x))) (range 0 10))
-; 1 1 4/3 2 16/5 16/3 64/7 16 256/9 256/5
-(newline)
+(display-top10 foo)
+; 1  1  4/3  2  16/5  16/3  64/7  16  256/9  256/5
 
 ; b)
 
@@ -17,9 +16,8 @@
 (define exp-series
   (cons-stream 1 (integrate-series exp-series)))
 
-(for-each (lambda (x) (display-blank (stream-ref exp-series x))) (range 0 10))
-(newline)
-; 1 1 1/2 1/6 1/24 1/120 1/720 1/5040 1/40320 1/362880
+(display-top10 exp-series)
+; 1  1  1/2  1/6  1/24  1/120  1/720  1/5040  1/40320  1/362880
 
 ; sin 的导数为cos，这也就是说 cos 的积分与sin 是同一个级数
 (define sine-series
@@ -29,11 +27,10 @@
 (define cosine-series
   (cons-stream 1 (integrate-series (scale-stream sine-series -1))))
 
-(for-each (lambda (x) (display-blank (stream-ref sine-series x))) (range 0 10))
-(newline)
-;0 1 0 -1/6 0 1/120 0 -1/5040 0 1/362880
-(for-each (lambda (x) (display-blank (stream-ref cosine-series x))) (range 0 10))
-; 1 0 -1/2 0 1/24 0 -1/720 0 1/40320 0
+(display-top10 sine-series)
+; 0  1  0  -1/6  0  1/120  0  -1/5040  0  1/362880
+(display-top10 cosine-series)
+; 1  0  -1/2  0  1/24  0  -1/720  0  1/40320  0
 
 
 

@@ -4,7 +4,7 @@
 ; (a0 a1 a2) * (b0 b1 b2)
 ; 要得到乘积后的级数，其实就是把同幂的系数相加就可以了。
 ; 题目给出的模版为 (cons-stream <??> (add-stream <??> <??>))
-; 第一个<??> 比较好填，就是0次幂系数相承就可以了。即 (* (stream-car s1) (stream-car s2))
+; 第一个<??> 比较好填，就是0次幂系数相乘就可以了。即 (* (stream-car s1) (stream-car s2))
 ; 但是第二个与第三个就不知道怎么填了，先从网上找了个答案，后面理解了再来更新。
 
 (load "3.59.scm")
@@ -19,6 +19,5 @@
 (define sum-one (add-streams (mul-series sine-series sine-series)
                              (mul-series cosine-series cosine-series)))
 
-(for-each (lambda (x) (display-blank (stream-ref sum-one x))) (range 0 10))
-
-; 1 0 0 0 0 0 0 0 0 0
+(display-top10 sum-one)
+; 1  0  0  0  0  0  0  0  0  0

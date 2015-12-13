@@ -107,6 +107,12 @@
 ; 这里的 primes 为递归定义，primes 中使用了 prime? ，而 prime? 中又使用了 primes
 ; 这一过程能行的原因是，在计算中的任一点，流 primes 都已经生成出足够多的部分，足以满足我们检查下面的任何数是否为素数；
 
+; 序对的无穷流
+(define (interleave s t)
+  (if (stream-null? s)
+    t
+    (cons-stream (stream-car s)
+                 (interleave t (stream-cdr s)))))
 
 
 
@@ -118,4 +124,13 @@
 
 (define (display-blank x)
   (display x)
-  (display " "))
+  (display "  "))
+
+(define (display-top10 s)
+  (newline)
+  (for-each (lambda (x) (display-blank (stream-ref s x))) (range 0 10))
+  (newline))
+
+(define (display-top10-line s)
+  (newline)
+  (for-each (lambda (x) (display-line (stream-ref s x))) (range 0 10)))
