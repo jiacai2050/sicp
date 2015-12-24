@@ -10,4 +10,4 @@
       3)))
 
 (define (n-smooth f n)
-  (repeated smooth n))
+  ((repeated smooth n) f))
