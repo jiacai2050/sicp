@@ -12,7 +12,8 @@
 
 - [老赵书托（2）：计算机程序的构造与解释](http://blog.zhaojie.me/2009/07/recommended-reading-2-sicp.html)  
 - [向热爱计算机科学的你推荐SICP](http://www.nowamagic.net/librarys/veda/detail/1905)
-- 王垠的[如何掌握程序语言](http://yinwang0.lofter.com/post/183ec2_47bea8)
+- [如何掌握程序语言](http://yinwang0.lofter.com/post/183ec2_47bea8) by 王垠
+- [Its the Best! Its the Worst! Why the split?](http://www.amazon.com/review/R403HR4VL71K8/ref=cm_cr_dp_title?ie=UTF8&ASIN=0262011530&channel=detail-glance&nodeID=283155&store=books) by Google公司研究总监[彼得·诺维格](https://en.wikipedia.org/wiki/Peter_Norvig)
 
 ## 目标
 
@@ -52,6 +53,7 @@
 - [MIT 视频公开课](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)，为了方面观看，我写了个脚本把这些视频＋英文字幕下载并且传到了[百度网盘](http://pan.baidu.com/s/1jGrI5EY)上
 - [epub 格式 + 在线 HTML5 版的 SICP](https://github.com/sarabander/sicp)
 - [北大 SICP 教学主页](http://www.math.pku.edu.cn/teachers/qiuzy/progtech/)，强烈推荐，课堂PPT总结的很好，还有中文版的[勘误表](http://www.math.pku.edu.cn/teachers/qiuzy/books/sicp/errata.htm)
+- [SICP in Javascript](https://www.comp.nus.edu.sg/~cs1101s/sicp/)，新加坡国立大学计算机学院 cs1101 课程
 
 ## 战友
 
