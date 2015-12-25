@@ -10,19 +10,16 @@
   (*
     (pow 2 x)
     (pow 3 y)))
-
+    
+(define (iter res count divider)
+  (if (= 0 (remainder res divider))
+    (iter (/ res divider) (+ 1 count) divider)
+    count))
+    
 (define (car z)
-  (define (iter res count)
-    (if (= 0 (remainder res 2))
-      (iter (/ res 2) (+ 1 count))
-      count))
-  (iter z 0))
+  (iter z 0 2))
 (define (cdr z)
-  (define (iter res count)
-    (if (= 0 (remainder res 3))
-      (iter (/ res 3) (+ 1 count))
-      count))
-  (iter z 0))
+  (iter z 0 3))
 
 (car (cons 5 4))
 ;5
