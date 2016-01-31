@@ -1,6 +1,4 @@
-## SICP
-
-[![SICP](http://img4.douban.com/lpic/s1113106.jpg)](http://sicp.liujiacai.net/)
+[![SICP](assets/sicp_banner.jpg)](http://sicp.liujiacai.net/)
 
 [SICP](http://book.douban.com/subject/1451622/)，一本讲解编程真谛的经典教材。之前上大学期间，陆陆续续看了2遍这本书，无奈都没坚持到底。第一次只看完第一章，第二次只看完前三章。很多习题也没做。
 
@@ -14,10 +12,13 @@
 - [向热爱计算机科学的你推荐SICP](http://www.nowamagic.net/librarys/veda/detail/1905)
 - [如何掌握程序语言](http://yinwang0.lofter.com/post/183ec2_47bea8) by 王垠
 - [Its the Best! Its the Worst! Why the split?](http://www.amazon.com/review/R403HR4VL71K8/ref=cm_cr_dp_title?ie=UTF8&ASIN=0262011530&channel=detail-glance&nodeID=283155&store=books) by Google公司研究总监[彼得·诺维格](https://en.wikipedia.org/wiki/Peter_Norvig)
+- [The Structure and Interpretation of the Computer Science Curriculum](http://www.ccs.neu.edu/racket/pubs/jfp2004-fffk.pdf) PDF文档。完美的东西并不存在，[HTDP](http://www.htdp.org/) 的作者们在这篇文章里面指出了 SICP 弊端
 
 ## 目标
 
-在**2016年1月1号**之前啃完**所有章节与习题**！！
+<del> 在**2016年1月1号**之前啃完**所有章节与习题**！！</del> 失败告终。只完成前三章。
+
+新的一年继续[读书计划](http://book.douban.com/people/liujiacai/do)，2016年6月30号前，完成剩下的第四章、第五章。
 
 ## 建议
 
@@ -34,7 +35,7 @@
 
 工欲善其事必先利其器。下面说下我Mac上的scheme环境：
 
-- ![Mac 环境](mac-env.png)
+- ![Mac 环境](assets/mac-env.png)
 - [mit-scheme 9.2](http://ftp.gnu.org/gnu/mit-scheme/stable.pkg/9.2/mit-scheme-9.2-x86-64.dmg)，我的Mac版本是10.10.2，按照上这个官方scheme后点击图标，闪退，不清楚为什么，我这里直接把`MIT:GNU Scheme.app/Contents`下的`Resources`文件夹拷贝出来，并把它加入的PATH中，这样就能够运行了。
 ![mit-scheme screencast](http://ww2.sinaimg.cn/mw690/5fee18eegw1es79f0y9u2j21tm0eqjus.jpg)
 - 这里安装好的scheme在交互式环境下[无法使用方向键](http://stackoverflow.com/questions/27648559/mit-scheme-cant-move-left-when-enter-code)，可以通过安装rlwrap解决（`brew install rlwrap`）之后，用`rlwrap mit-scheme`启动就可以了。
@@ -48,9 +49,8 @@
 ## 辅助资料
 
 - [Google](https://www.google.com/ncr) is always your friend
-- [The complete text in HTML](https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-4.html)
 - [MIT SICP Web Site](http://mitpress.mit.edu/sicp)
-- [MIT 视频公开课](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)，为了方面观看，我写了个脚本把这些视频＋英文字幕下载并且传到了[百度网盘](http://pan.baidu.com/s/1jGrI5EY)上
+- [MIT 视频公开课](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/)，百度网盘[下载地址](http://pan.baidu.com/s/1jGrI5EY)
 - [epub 格式 + 在线 HTML5 版的 SICP](https://github.com/sarabander/sicp)
 - [北大 SICP 教学主页](http://www.math.pku.edu.cn/teachers/qiuzy/progtech/)，强烈推荐，课堂PPT总结的很好，还有中文版的[勘误表](http://www.math.pku.edu.cn/teachers/qiuzy/books/sicp/errata.htm)
 - [SICP in Javascript](https://www.comp.nus.edu.sg/~cs1101s/sicp/)，新加坡国立大学计算机学院 cs1101 课程
@@ -63,18 +63,19 @@
 
 - [南瓜](https://github.com/ng-wei)
 - [小挖](https://github.com/jerrychen1990)
-- [耗子](https://github.com/haozi-yz)，由于工作繁忙，于 2015-08-17 放弃
+- [浩子](https://github.com/haozi-yz)，由于工作繁忙，于 2015-08-17 放弃
 
 欢迎志同道合的朋友加入我们的 SICP 读书 QQ 群：`119845407`。
 手机 QQ 可直接扫码😊
 
-![sicp_qq](SICP_QQ.png)
+![sicp_qq](assets/SICP_QQ.png)
 
 ## Timeline
 
 - 2015-5-17  第三次开启SICP之旅
 - 2015-7-12  结束第一章，构造过程抽象。[我的总结](http://liujiacai.net/blog/2015/07/18/sicp-chapter1-summary/)
 - 2015-9-20  结束第二章，构造数据抽象。[我的总结](http://liujiacai.net/blog/2015/09/20/sicp-chapter2-summary/)
+- 2015-12-26  结束第三章，模块化、对象和状态。[我的总结](http://liujiacai.net/blog/2015/12/26/sicp-chapter3-summary/)
 
 ## License
 

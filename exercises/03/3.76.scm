@@ -9,7 +9,7 @@
   (define (iter s last-value)
     (cons-stream (sign-change-detector (stream-car s) last-value)
                  (iter (stream-cdr s) (stream-car s))))
-  (iter (smooth input-stream)))
+  (iter (smooth input-stream) 0))
 ; 或者下面这种形式
 (define (make-zero-crossings input-stream smooth)
   (let ((smooth-stream (smooth input-stream)))
