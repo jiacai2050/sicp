@@ -17,14 +17,14 @@
 (define (exp-type exp) (car exp))
 (define (exp-body exp) (cdr exp))
 
-  
-(put 'quote text-of-quotation) 
-(put 'set! eval-assignment) 
-(put 'define eval-definition) 
-(put 'if eval-if) 
-(put 'lambda (lambda (x y) (make-procedure (lambda-parameters x) (lambda-body x) y))) 
-(put 'begin (lambda (x y) (eval-sequence (begin-sequence x) y))) 
-(put 'cond (lambda (x y) (eval (cond->if x) y))) 
+
+(put 'quote text-of-quotation)
+(put 'set! eval-assignment)
+(put 'define eval-definition)
+(put 'if eval-if)
+(put 'lambda (lambda (exp env) (make-procedure (lambda-parameters exp) (lambda-body exp) env)))
+(put 'begin (lambda (exp env) (eval-sequence (begin-sequence exp) env)))
+(put 'cond (lambda (exp env) (eval (cond->if exp) env)))
 
 
 ; (define (install-if-package)

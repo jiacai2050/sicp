@@ -1,0 +1,21 @@
+(define (let*? exp)
+  (tagged-list exp 'let*))
+
+(define (let*-first-binding exp)
+  (caadr exp))
+(define (let*-first-binding-variable exp)
+  (car (let*-first-binding exp)))
+(define (let*-first-binding-value exp)
+  (cadr (let*-first-binding exp)))
+
+(define (let*-rest-bindings exp)
+  (cdadr exp))
+(define (let*-body exp)
+  (cddr exp))
+
+(define (let*->nested-lets exp)
+  (let (((let*-first-binding-variable exp) (let*-first-binding-value exp)))
+    (if (null? (let*-rest-bindings exp))
+      (let*-body exp)
+      (let*->nested-lets (list 'let* (let*-rest-bindings exp)
+                           (let*-body exp))))))

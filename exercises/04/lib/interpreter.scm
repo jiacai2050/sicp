@@ -16,7 +16,7 @@
         ((application? exp)
           (apply (eval (operator exp) env)
                  (list-of-values (operands exp) env)))
-        (else 
+        (else
           (error "Unknown expression type -- EVAL " env))))
 
 ; 这里将 eval 实现为一个采用 cond 的分情况分析。这样做的缺点是我们的过程只处理了若干种不同类型的表达式。
@@ -32,10 +32,10 @@
             (extend-environment (procedure-parameters procedure)
                                 arguments
                                 (procedure-environment procedure))))
-        (else 
+        (else
           (error "Unknown procedure type --  APPLY " procedure))))
-        
-; 过程参数
+
+; 过程参数，eval 使用
 
 (define (list-of-values exps env)
   (if (no-operands? exps)
@@ -50,7 +50,7 @@
     (eval (if-consequent exp) env)
     (eval (if-alternative exp) env)))
 
-; 序列
+; 序列，可以用在 apply 用于求值过程体里的表达式序列，也可以用在 eval 求值 begin 表达式里面的表达式序列
 
 (define (eval-sequence exps env)
   (cond ((last-exp? exps) (eval (first-exp exps) env))
@@ -60,16 +60,16 @@
 ; 赋值和定义
 
 (define (eval-assignment exp env)
-  (set-variable-value (assignment-variable exp)
-                      (eval (assignment-value exp) env)
-                      env)
+  (set-variable-value! (assignment-variable exp)
+                       (eval (assignment-value exp) env)
+                       env)
   'ok)
 
 (define (eval-definition exp env)
-  (define-variable (definition-variable exp)
-                   (eval (definition-value exp) env)
-                   env)
-  'ok)     
+  (define-variable! (definition-variable exp)
+                    (eval (definition-value exp) env)
+                    env)
+  'ok)
 
 ; 4.2 表达式的表示
 
@@ -178,7 +178,7 @@
 
 (define (cond-clauses exp) (cdr exp))
 
-(define (cond-else-clause? clause) 
+(define (cond-else-clause? clause)
   (eq? 'else (cond-predicate clause)))
 
 (define (cond-predicate clause) (car clause))
@@ -195,7 +195,7 @@
           (rest (cdr clauses)))
       (if (cond-else-clause? first)
         (if (null? rest)
-          (sequence->exp (cond-actions first)) 
+          (sequence->exp (cond-actions first))
           (error "ELSE clause isn't last -- CONF->IF" clause))
         (make-if (cond-predicate first)
                  (sequence->exp (cond-actions first))
@@ -204,7 +204,6 @@
 ; 实际的 Lisp 系统提供了一种机制，使用户可以添加新的派生表达式并将它们的实现描述为语法变换，而又不必修改求值器。
 ; 这种用户定义称为 宏。
 ; 虽然很容易为提供宏增加一种基本机制，但是这样做出的语言却会产生一种微妙的名字冲突问题。
-一些研究：
-Eugene Kohlbecker, 1986。http://www.ccs.neu.edu/racket/pubs/dissertation-kohlbecker.pdf
-https://www.reddit.com/r/scheme/comments/dggo1/syntactic_extensions_in_the_programming_language/
-
+; 一些研究：
+; Eugene Kohlbecker, 1986。http://www.ccs.neu.edu/racket/pubs/dissertation-kohlbecker.pdf
+; https://www.reddit.com/r/scheme/comments/dggo1/syntactic_extensions_in_the_programming_language/
