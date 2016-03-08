@@ -1,11 +1,13 @@
 (define (let? exp)
   (tagged-list? exp 'let))
 
+(define (let-bindings exp)
+  (cadr exp))
 (define (let-variables exp)
-  (map car (cadr exp)))
+  (map car (let-bindings exp)))
 
 (define (let-values exp)
-  (map cadr (cadr exp)))
+  (map cadr (let-bindings exp)))
 
 (define (let-body exp)
   (cddr exp))
@@ -14,6 +16,9 @@
   ((make-lambda (let-variables exp)
                 (let-body exp))
     (let-values exp)))
+
+(define (make-let bindings body)
+  (list 'let bindings body))
 
 ; 将 let? 放在 (application? exp) 之前即可。
 (define (eval exp env)

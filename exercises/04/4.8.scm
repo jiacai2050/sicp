@@ -1,3 +1,5 @@
+(load "4.6.scm")
+
 (define (let? exp)
   (tagged-list? exp 'let))
 
