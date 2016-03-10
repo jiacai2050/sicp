@@ -289,7 +289,7 @@
     (define (scan vars vals)
       (cond ((null? vars)
               (add-binding-to-frame! var val frame))
-            ((eq? var (car vals))
+            ((eq? var (car vars))
               (set-car! vals val))
             (else (scan (cdr vars) (cdr vals)))))
     (scan (frame-variables frame)
