@@ -1,4 +1,5 @@
-; 这道题目讲的是 Y 算子
+; 这道题目讲的是 Y 算子。关于 Y 算子的更多内容可以参考我写的文章
+; http://liujiacai.net/blog/2016/02/22/recursion-without-name/
 
 ; a)
 
