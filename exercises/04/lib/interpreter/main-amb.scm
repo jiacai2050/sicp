@@ -1,3 +1,9 @@
+(load "env.scm")
+(load "keyword.scm")
+(load "builtin.scm")
+(load "analyzer.scm")
+(load "ambeval.scm")
+
 ; 简单表达式
 (define (analyze-self-evaluating exp)
   (lambda (env succeed fail)
@@ -147,7 +153,7 @@
           (display "Starting a new problem ")
           (ambeval input
                    the-global-environment
-                   (lambda (val enxt-alternative)
+                   (lambda (val next-alternative)
                      (announce-output output-prompt)
                      (user-print val)
                      (internal-loop next-alternative))
@@ -159,4 +165,18 @@
     (lambda ()
       (newline)
       (display "There is no current problem")
-      (driver-loop))))   
+      (driver-loop))))
+(define (prompt-for-input string)
+  (newline) (newline) (display string) (newline))
+(define (announce-output string)
+  (newline) (display string) (newline))
+(define (user-print object)
+  (if (compound-procedure? object)
+    (display (list 'compound-procedure
+                    (procedure-parameters object)
+                    (procedure-body object)
+                    '<procedure-env>))
+    (display object)))
+
+(define the-global-environment (setup-environment))
+(driver-loop)
