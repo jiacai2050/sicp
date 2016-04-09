@@ -2,7 +2,6 @@
 (load "keyword.scm")
 (load "builtin.scm")
 (load "analyzer.scm")
-(load "ambeval.scm")
 
 ; 简单表达式
 (define (analyze-self-evaluating exp)
@@ -140,43 +139,26 @@
                            (try-next (cdr choices))))))
       (try-next cprocs))))
 
-(define input-prompt " Amb-Eval input: ")
-(define output-prompt " Amb-Eval values: ")
-(define (driver-loop)
-  (define (internal-loop try-again)
-    (prompt-for-input input-prompt)
-    (let ((input (read)))
-      (if (eq? input 'try-again)
-        (try-again)
-        (begin
-          (newline)
-          (display "Starting a new problem ")
-          (ambeval input
-                   the-global-environment
-                   (lambda (val next-alternative)
-                     (announce-output output-prompt)
-                     (user-print val)
-                     (internal-loop next-alternative))
-                   (lambda ()
-                     (announce-output "There are no more values of")
-                     (user-print input)
-                     (driver-loop)))))))
-  (internal-loop
-    (lambda ()
-      (newline)
-      (display "There is no current problem")
-      (driver-loop))))
-(define (prompt-for-input string)
-  (newline) (newline) (display string) (newline))
-(define (announce-output string)
-  (newline) (display string) (newline))
-(define (user-print object)
-  (if (compound-procedure? object)
-    (display (list 'compound-procedure
-                    (procedure-parameters object)
-                    (procedure-body object)
-                    '<procedure-env>))
-    (display object)))
+(define (ambeval exp env succeed fail)
+  ((analyze exp) env succeed fail))
 
-(define the-global-environment (setup-environment))
-(driver-loop)
+
+(define (analyze exp)
+  (cond ((self-evaluating? exp) (analyze-self-evaluating exp))
+        ((quoted? exp) (analyze-quoted exp))
+        ((variable? exp) (analyze-variable exp))
+        ((assignment? exp) (analyze-assignment exp))
+        ((definition? exp) (analyze-definition exp))
+        ((if? exp) (analyze-if exp))
+        ((lambda? exp) (analyze-lambda exp))
+        ((begin? exp) (analyze-sequence (begin-actions exp)))
+        ((cond? exp) (analyze (cond->if exp)))
+        ((amb? exp) (analyze-amb exp))
+        ((application? exp) (analyze-application exp))
+        (else (error "Unknown expression type -- ANALYZE " exp))))
+
+(define (amb? exp)
+  (tagged-list? exp 'amb))
+
+(define (amb-choices exp)
+  (cdr exp))

@@ -1,5 +1,11 @@
 (load "keyword.scm")
 
+; 自求值表达式
+(define (self-evaluating? exp)
+  (cond ((number? exp) true)
+        ((string? exp) true)
+        (else false)))
+
 ; 变量用符号表示
 (define (variable? exp) (symbol? exp))
 ; 引号表达式 (quote <text-of-quotation>)

@@ -43,15 +43,6 @@
     (cons (eval (first-operand exps) env)
           (list-of-values (rest-operands exps) env))))
 
-; 4.2 表达式的表示
-
-; 自求值表达式
-(define (self-evaluating? exp)
-  (cond ((number? exp) true)
-        ((string? exp) true)
-        (else false)))
-
-
 (define input-prompt ";;; M-Eval input: ")
 (define output-prompt ";;; M-Eval values: ")
 (define (driver-loop)
