@@ -1,0 +1,5 @@
+(rule (big-shop ?person ?division)
+  (and (job ?person (?division . ?type))
+       (supervisor ?person ?supervisor)
+       (job ?supervisor (?division2 . ?type2))
+       (not (same (?division2 ?division)))))
