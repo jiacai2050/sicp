@@ -1,5 +1,7 @@
+; 第一条规则说明 一个列表中前两个元素是相邻的
 (rule (?x next-to ?y in (?x ?y . ?u)))
 
+; 这条规则说明 一个列表中，除第一个元素外，其余的元素也是相邻的
 (rule (?x next-to ?y in (?v . ?z))
       (?x next-to ?y in ?z))
 
