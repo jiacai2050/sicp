@@ -1,7 +1,7 @@
 (rule (last-pair (?last) (?last)))
 
-(rule (last-pair (?first . ?second) (?last))
-      (last-pair ?second (?last)))
+(rule (last-pair (?first . ?rest) (?last))
+      (last-pair ?rest (?last)))
 
 (last-pair (3) ?x)
 (last-pair (1 2 3) ?x)
