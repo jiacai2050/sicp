@@ -140,3 +140,43 @@
     (if binding
       (pattern-match (binding-value binding) dat frame)
       (extend var dat frame))))
+
+; 规则与合一
+
+(define (apply-rules pattern frame)
+  (stream-flatmap (lambda (rule)
+                    (apply-a-rule rule pattern frame))
+                  (fetch-rules pattern frame)))
+
+(define (apply-a-rule rule query-pattern query-frame)
+  (let ((clean-rule (rename-variables-in rule)))
+    (let ((unify-result
+           (unify-match query-pattern
+                        (conclusion clean-rule)
+                        query-frame)))
+      (if (eq? unify-result 'failed)
+        the-empty-stream
+        (qeval (rule-body clean-rule)
+               (singleton-stream unify-result))))))
+
+(define (rename-variables-in rule)
+  (let ((rule-applicaiton-id (new-rule-application-id)))
+    (define (tree-walk exp)
+      (cond ((var? exp)
+              (make-new-variable exp rule-applicaiton-id))
+            ((pair? exp)
+              (cons (tree-walk (car exp))
+                    (tree-walk (cdr exp))))
+            (else exp)))
+    (tree-walk exp)))
+
+(define (unify-match p1 p2 frame)
+  (cond ((eq? frame 'failed) 'failed)
+        ((equal? p1 p2) frame)
+        ((var? p1) (extend-if-possible p1 p2 frame))
+        ((var? p2) (extend-if-possible p2 p1 frame))
+        ((and (pair? p1) (pair? p2))
+          (unify-match (cdr p1)
+                       (cdr p2)
+                       (unify-match (car p1) (car p2) frame)))
+        (else 'failed)))
