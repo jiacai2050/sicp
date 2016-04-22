@@ -180,3 +180,31 @@
                        (cdr p2)
                        (unify-match (car p1) (car p2) frame)))
         (else 'failed)))
+
+(define (extend-if-possible var val frame)
+  (let ((binding (binding-in-frame var frame)))
+    (cond (binding
+            (unify-match (binding-value binding) val frame))
+          ((var? val)
+            (let ((binding (binding-in-frame val frame)))
+              (if binding
+                (unify-match var (binding-value binding) frame)
+                (extend var val frame))))
+          ((depends-on? val var frame)
+            'failed)
+          (else (extend var val frame)))))
+
+(define (depends-on? exp var frame)
+  (define (tree-walk e)
+    (cond ((var? e)
+            (if (equal? var e)
+              #t
+              (let ((b (binding-in-frame e frame)))
+                (if b
+                    (tree-walk (binding-value b))
+                    #f))))
+          ((pair? e)
+            (or (tree-walk (car e))
+                (tree-walk (cdr e))))
+          (else #f)))
+  (tree-walk exp))
