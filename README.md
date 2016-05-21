@@ -70,6 +70,7 @@
 - 2015-9-20  结束第二章，构造数据抽象。[我的总结](http://liujiacai.net/blog/2015/09/20/sicp-chapter2-summary/)
 - 2015-12-26  结束第三章，模块化、对象和状态。[我的总结](http://liujiacai.net/blog/2015/12/26/sicp-chapter3-summary/)
 - 2016-04-23  结束第四章，元语言抽象。[我的总结](http://liujiacai.net/blog/2016/04/23/sicp-chapter4-summary/)
+- 2016-05-21  结束第五章，寄存器机器里的计算。[我的总结](http://liujiacai.net/blog/2016/05/21/sicp-chapter5-summary/)
 
 ## License
 
