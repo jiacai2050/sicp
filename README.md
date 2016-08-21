@@ -18,7 +18,7 @@
 
 <del> 在**2016年1月1号**之前啃完**所有章节与习题**！！</del> 失败告终。只完成前三章。
 
-新的一年继续[读书计划](http://book.douban.com/people/liujiacai/do)，2016年6月30号前，完成剩下的第四章、第五章。
+新的一年继续[读书计划](http://book.douban.com/people/liujiacai/do)，<del>2016年6月30号前，完成剩下的第四章、第五章。</del> 完成
 
 ## 建议
 
