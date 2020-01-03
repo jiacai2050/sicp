@@ -10,7 +10,7 @@
 
 - [老赵书托（2）：计算机程序的构造与解释](http://blog.zhaojie.me/2009/07/recommended-reading-2-sicp.html)  
 - [向热爱计算机科学的你推荐SICP](http://www.nowamagic.net/librarys/veda/detail/1905)
-- [如何掌握程序语言](http://yinwang0.lofter.com/post/183ec2_47bea8) by 王垠
+- [如何掌握程序语言](http://www.yinwang.org/blog-cn/2017/07/06/master-pl) by 王垠
 - [Its the Best! Its the Worst! Why the split?](http://www.amazon.com/review/R403HR4VL71K8/ref=cm_cr_dp_title?ie=UTF8&ASIN=0262011530&channel=detail-glance&nodeID=283155&store=books) by Google公司研究总监[彼得·诺维格](https://en.wikipedia.org/wiki/Peter_Norvig)
 - [The Structure and Interpretation of the Computer Science Curriculum](http://www.ccs.neu.edu/racket/pubs/jfp2004-fffk.pdf) PDF文档。完美的东西并不存在，[HTDP](http://www.htdp.org/) 的作者们在这篇文章里面指出了 SICP 弊端
 
